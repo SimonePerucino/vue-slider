@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" id="root">
+        <div class="text-ac position-relative" id="sliderContainer" tabindex="-1" @keyup.left="changeImg(-1)" @keyup.right="changeImg(1)">
+            <!-- freccia sinistra -->
+            <div class="display-ib ">
+                <i class="fas fa-chevron-left" @click="changeImg(-1)"></i>
+            </div>
+            <!-- container immagini -->
+            <div class="display-ib vertical-align-m container-img">
+                <img :src="picturesList[actualPicture]" alt="" class="slider-img">
+            </div>
+            <div class="container-dots">
+                <a href="#" class="dot" :class="{currentImg: actualPicture === index}"
+                    v-for="img, index) in picturesList" @click="onDotClick(index)"></a>
+
+            </div>
+            <!-- freccia destra -->
+            <div class="display-ib">
+                <i class="fas fa-chevron-right" @click="changeImg(+1)"></i>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript.js"></script>
+</body>
+
+</html>

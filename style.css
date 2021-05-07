@@ -1,0 +1,51 @@
+.display-ib{
+    display: inline-block;
+}
+
+.vertical-align-m{
+    vertical-align: middle;
+}
+
+.text-ac{
+    text-align: center;
+}
+
+
+.container-img{
+    max-width: 400px;
+    height: auto;
+}
+
+.slider-img{
+    width: 100%;
+    height: auto;
+}
+
+.container-dots{
+    position: absolute;
+    padding: 10px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.dot {
+    display: inline-block;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 4px;
+}
+
+.position-relative{
+    position: relative;
+}
+
+
+
+.currentImg {
+    background-color: rgb(9, 255, 0);
+}
